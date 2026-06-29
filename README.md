@@ -30,6 +30,21 @@
 
 ---
 
+## 🤖 Bot Capabilities
+
+RestoBot understands natural language and can handle these tasks automatically:
+
+| Capability               | Description                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| 📄 **Menu Q&A**          | Answer menu questions from an uploaded PDF — ingredients, prices, categories |
+| 🍽️ **Dish Suggestions** | Suggest dishes based on your preferences (e.g., "something vegetarian and light") |
+| 🛒 **Auto Ordering**     | Place orders automatically when you ask — just say what you want             |
+| ❌ **Cancel Orders**     | Cancel specific orders (`Cancel order #7`) or your latest active order (`Cancel my order`) via chat |
+| 💰 **Price Lookup**      | Fetch prices automatically from the menu — no need to type them manually     |
+| 🧾 **Bill Generation**   | Generate an itemised bill with subtotal, 8% tax, and total                   |
+
+---
+
 ## 🏗 Architecture Overview
 
 ```
@@ -271,6 +286,10 @@ curl -X POST http://localhost:8000/documents/upload \
   "order_id": 5
 }
 ```
+
+> **💡 Cancel orders via chat too!** Just tell RestoBot:
+> - `"Cancel order #7"` — cancels a specific order by number
+> - `"Cancel my order"` — cancels your latest active order
 
 ---
 
