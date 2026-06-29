@@ -1,0 +1,30 @@
+[project]
+name = "restobot"
+version = "1.0.0"
+description = "AI Restaurant PDF Chatbot Assistant API — built with LangChain, FastAPI, and Ollama"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.138.1",
+    "uvicorn>=0.34.0",
+    "langchain>=1.3.11",
+    "langchain-community>=0.4.2",
+    "langchain-ollama>=1.1.0",
+    "langchain-text-splitters>=0.3.8",
+    "pinecone>=6.0.0",
+    "psycopg2-binary>=2.9.12",
+    "passlib[bcrypt]>=1.7.4",
+    "python-jose[cryptography]>=3.3.0",
+    "python-dotenv>=1.2.2",
+    "pydantic[email]>=2.0.0",
+    "pypdf>=5.4.0",
+    "httpx>=0.28.0",
+    "bcrypt==4.0.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
